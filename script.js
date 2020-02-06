@@ -103,10 +103,11 @@ but this is kind of bad from a readability standpoint.
 
 let funcyvar = 15;
 
-function funcy() {
+function funcy(x, y) {
     let funcyvar = 17;
     funcyvar = 16;
     console.log(funcyvar);
+    return x + y;
 }
 
 funcy();
@@ -193,3 +194,27 @@ funcy4();
 // we can set a break point in the code itself using 
 //      debugger;
 
+// can't nest comments so this is gonna get messy, but here's an example of
+// a very usable function comment
+
+/**
+ * Returns x raised to the n-th power.
+ *
+ * @param {number} x The number to raise.
+ * @param {number} n The power, must be a natural number.
+ * @return {number} x raised to the n-th power.
+ */
+
+ /*
+ function pow(x, n) {
+  ...
+}
+*/
+
+/*
+Added a test script to tests/test.js which uses mocha. Seems like a cool 
+utility, need to play around with it a little more and see how to make
+running it a little more elegant. Otherwise, for the moment, it serves
+its purpose.
+
+*/

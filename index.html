@@ -6,7 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>A Blog of Sorts</title>
     <link href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap" rel="stylesheet">
+    <!-- add mocha css, to show results -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+    <!-- add mocha framework code -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+    <script>
+        mocha.setup('bdd'); // minimal setup
+    </script>
+    <!-- add chai -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+    <script>
+        // chai has a lot of stuff, let's make assert global
+        let assert = chai.assert;
+    </script>
     <style>
+
         body {
             background-color: #263238;
             font-family: 'Fira Code', monospace;
@@ -23,10 +37,16 @@
             font-size: 16px;
         }
     </style>  
+    <script async src="script.js"></script>
+    <script async src="test.js"></script>
 <body>
     <title>Blag</title>
-    <div class="center">
 
+    <div id="mocha"></div>
+    <!-- This page will run tests from tests/test.js when mocha.run() is -->    
+    <!-- ... well ... run-->
+    
+    <div class="center">
         <div class="post">
             <h1>January 28</h1>
             <p>
@@ -75,6 +95,5 @@
             </p>
         </div>
     </div>
-    <script async src="script.js"></script>
 </body>
 </html>
