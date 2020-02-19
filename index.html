@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="vie6port" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>A Blog of Sorts</title>
     <link href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap" rel="stylesheet">
@@ -13,8 +13,13 @@
             color: #eeffff;
         }
         .center {
-            width: 60%;
+            width: 900px;
             margin: 0 auto;
+        }
+        @media only screen and (max-width: 899px) {
+          .center {
+            width: 100%;
+          }  
         }
         .post {
             background-color: #212b30;
@@ -73,6 +78,53 @@
                 During that time I think I'll work on more of that <a href="https://javascript.info">javascript tutorial </a> I've been working through.
                 
             </p>
+        </div>
+        <div class="post">
+            <h1>February 19</h1>
+            <p>
+                Not a lot of blog in the past few weeks due to an influx of homework and social obligations, but I finally got a chance to work today! Did a few things actually.
+                <ul>
+
+                    <li>
+                        Updated my <a href="https://github.com/benalittlewhile/dotfiles">dotfiles</a> repo on github to match my new setup, loving how easy vs code makes it to back everything up to the repo and move to a new system if needed. Also, since I don't think I've said it here: <a href="https://gitlab.com/jallbrit/bonsai.sh">bonsai.sh</a> is far and away my favorite bit of software I've used recently. I love the way it integrates with neofetch, clean and pleasing every time I open a terminal. 10/10 would recommend.
+                    </li>
+                    <li>
+                        Worked on my networking homework. We're using <a 
+                        href="http://mininet.org/">mininet</a> to simulate various 
+                        network topologies, and I struggled to get it running 
+                        properly on my home server. Both the source and packaged 
+                        installs gave me weird errors, which I traced back to 
+                        openvswitch but couldn't remedy. I ended up just using 
+                        mininet's prebuilt vm image with qemu to run the tests our professor requested. 
+                    </li>
+                    <li>
+                        Started my senior design project! My team is working on
+                        a scheduling app for a music institute in Dallas using
+                        <a href="https://developers.google.com/optimization">Google OR Tools</a> for optimization. I'll be working with another
+                        teammate on the front end of the project, and I'm really
+                        looking forward to digging in and making something useful.
+                        <br> We decided to use Vue as a front end framework for 
+                        the app since a) doing input and output by hand for the 
+                        kinds of data we're going to be working with would be 
+                        extremely taxing, and b) working with components will 
+                        allow for a clean, consistent experience that can scale 
+                        to whatever the project needs. I personally wanted to 
+                        find c) a front end framework that I could really get 
+                        into. While I might have preferred React for its wider 
+                        industry adoption and, by extension, job prospects, I 
+                        think Vue is the better choice for the scale of project 
+                        we're targeting.
+                        <span title="I fully acknowledge my hubris on this point, but even if it bites me I'll learn something useful">
+                            Of course, if we find we need the power of React or
+                            another more comprehensive platform, switching over 
+                            should be a fairly simple, and educational,
+                            experience.
+                        </span>
+                    </li>
+                </ul>
+                Later today I'll finish my machine learning assignment in R 
+                and hopefully get to make a little more progress on that js 
+                tutorial.
         </div>
     </div>
 </body>
