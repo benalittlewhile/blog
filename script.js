@@ -218,3 +218,61 @@ running it a little more elegant. Otherwise, for the moment, it serves
 its purpose.
 
 */
+
+/*
+Square brackets in object properties allow the key for the property to be 
+computed outside of the object itself. For example:
+*/
+
+let boxguy = {};
+let boxkey = "the key to a box";
+boxguy = {
+    name: 'boxy',
+    [boxkey]: "The box key value",
+};
+
+/*
+Now we can access the boxkey property by referencing using either the boxkey
+string itself, or the boxkey variable. Kinda neat.
+
+Using square brackets in this way also allows us to do operation evaluations to
+determine the key that the value should be assigned to, or references. Imagining
+what this can do when des- wait does it actually run a function if we feed it
+one?
+*/
+
+let return4 = () => 2+2;
+
+let box2 = {
+    [return4()]: "A thing that returns",
+};
+
+/*
+answer is no, it doesn't actually evaluate functions
+*/
+/*
+AH But it will if we run them ourselves... which isn't the same thing but
+accomplishes the same result. So be it.
+Admittedly, if the set of things inside the brackets evaluates to a string
+then that string becomes the key for the property, which is neat
+*/ 
+
+/*
+Property value shorthand
+Evidently using existing variables as property names is common, so if you
+provide an existing variable and no property name then the name will be 
+automatically assumed to be the variable name.
+eg:
+*/
+
+let boxname = 'A box from a distinct part of town'
+let namedbox = {
+    boxname,
+    value: 'more than another box, probably',
+}
+
+/*
+namedbox automatically has property boxname with the value supplied previously.
+Clean as h*ck.
+*/
+
