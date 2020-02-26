@@ -45,3 +45,20 @@ body {
 .navbar a.active {
   background-color: #212b30;
 }
+
+code {
+  background-color: #1c2529;
+  display: block;
+  padding: 10px;
+}
+
+.learning {
+  background-color: #212b30;
+  padding: 10px;
+  padding-top: 5px;
+  font-size: 18px;
+}
+
+.learning ul{
+  list-style-type: none;
+}
