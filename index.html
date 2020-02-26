@@ -19,29 +19,6 @@
         // chai has a lot of stuff, let's make assert global
         let assert = chai.assert;
     </script>
-    <style>
-
-        body {
-            background-color: #263238;
-            font-family: 'Fira Code', monospace;
-            color: #eeffff;
-        }
-        .center {
-            width: 900px;
-            margin: 0 auto;
-        }
-        @media only screen and (max-width: 899px) {
-          .center {
-            width: 100%;
-          }  
-        }
-        .post {
-            background-color: #212b30;
-            padding: 10px;
-            padding-top: 5px;
-            font-size: 16px;
-        }
-    </style>  
     <script async src="script.js"></script>
     <script async src="test.js"></script>
 <body>
@@ -51,6 +28,15 @@
     <!-- This page will run tests from tests/test.js when mocha.run() is -->    
     <!-- ... well ... run-->
     
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <title>Blag</title>
+    <div class="navbar">
+        <a class="active" href="index.html">blog</a>
+        <a href="goals.html">tolearn</a>
+    </div>
     <div class="center">
         <div class="post">
             <h1>January 28</h1>
@@ -84,7 +70,7 @@
                 the new stuff was disabled by default, which means we have to 
                 enable it when we want to use it. we do this using
             </p>
-            <code>
+            <code class="prettyprint">
                 "use strict";
             </code>
             <p>
@@ -106,8 +92,9 @@
                 <ul>
 
                     <li>
-                        Updated my <a href="https://github.com/benalittlewhile/dotfiles">dotfiles</a> repo on github to match my new setup, loving how easy vs code makes it to back everything up to the repo and move to a new system if needed. Also, since I don't think I've said it here: <a href="https://gitlab.com/jallbrit/bonsai.sh">bonsai.sh</a> is far and away my favorite bit of software I've used recently. I love the way it integrates with neofetch, clean and pleasing every time I open a terminal. 10/10 would recommend.
+                        Updated my <a href="https://github.com/benalittlewhile/dotfiles">dotfiles</a> repo on github to match my new setup, loving how easy vs code makes it to back everything up to the repo and move to a new system if needed. Also, since I don't think I've said it here: <span title="Happy little tree in my terminal :)"><a href="https://gitlab.com/jallbrit/bonsai.sh">bonsai.sh</a> is far and away my favorite bit of software I've used recently. I love the way it integrates with neofetch, clean and pleasing every time I open a terminal. 10/10 would recommend.</span>
                     </li>
+                    <br>
                     <li>
                         Worked on my networking homework. We're using <a 
                         href="http://mininet.org/">mininet</a> to simulate various 
@@ -117,13 +104,14 @@
                         openvswitch but couldn't remedy. I ended up just using 
                         mininet's prebuilt vm image with qemu to run the tests our professor requested. 
                     </li>
+                    <br>
                     <li>
                         Started my senior design project! My team is working on
                         a scheduling app for a music institute in Dallas using
                         <a href="https://developers.google.com/optimization">Google OR Tools</a> for optimization. I'll be working with another
                         teammate on the front end of the project, and I'm really
                         looking forward to digging in and making something useful.
-                        <br> We decided to use Vue as a front end framework for 
+                        <br><br> We decided to use Vue as a front end framework for 
                         the app since a) doing input and output by hand for the 
                         kinds of data we're going to be working with would be 
                         extremely taxing, and b) working with components will 
@@ -145,6 +133,17 @@
                 Later today I'll finish my machine learning assignment in R 
                 and hopefully get to make a little more progress on that js 
                 tutorial.
+        </div>
+        <div class="post">
+            <h1>February 26</h1>
+            <p>
+                Adding a page to this site to track the things I want to work on or learn. I think having a nice big poster for all of it will help provide direction for the times I sit down and can't decide what to look at. Of course, a second page means I'm going to need a way to get to it, so a nav bar is in order. Lots of new things, gonna be fun.
+            </p>
+            <p>
+                20 minutes later - That uh... took a lot less time than it might have. Thanks css! (Can't remember thinking that before...) 
+                <br>
+                I like the implementation so far, but having to change the headers in every page each time I add a new one, and copy the header to the new page past that, is going to get tedious quickly. I suspect that's running into one of the reasons frameworks are so prevalent. Over spring break I plan to try and make something in react to add to my portfolio, refactoring this site to use it might be a good way to get my feet wet before diving into something bigger.
+            </p>
         </div>
     </div>
 </body>
