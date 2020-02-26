@@ -1,0 +1,47 @@
+body {
+    background-color: #263238;
+    font-family: 'Fira Code', monospace;
+    color: #eeffff;
+    margin: 0 auto;
+    padding: 0;
+}
+.center {
+    width: 900px;
+    margin: 0 auto;
+    margin-top: 45px;
+}
+@media only screen and (max-width: 899px) {
+  .center {
+    width: 100%;
+  }  
+}
+.post {
+    background-color: #212b30;
+    padding: 10px;
+    padding-top: 5px;
+    font-size: 16px;
+}
+.navbar {
+  background-color: #1c2529;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  color: #eeffff;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #82aaff;
+}
+
+.navbar a.active {
+  background-color: #212b30;
+}
