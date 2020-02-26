@@ -276,3 +276,43 @@ namedbox automatically has property boxname with the value supplied previously.
 Clean as h*ck.
 */
 
+/*
+js *objects* are stored based on memory location, meaning that copying an 
+object to another variable creates another pointer (bear with me) to that
+object's location, rather than creating a new object
+
+When an object is instantiated as a const
+eg:
+const user = {
+    prop1,
+    prop2,
+    name
+}
+
+The *object being referenced* is constant, but the object's *properties* can
+be changed. That is, the variable user itself cannot be changed to something 
+else or pointed at a different object, but the object it's pointing to
+is not constant and can be changed.
+
+to actually copy the values of the origin object's properties, we have to loop
+through them or find some other work around to skip the assignment
+
+for one way:
+let obj1 = {somestuff}
+let obj2 = Object.assign({}, obj1)
+
+
+Very important bit, at least for me:
+Whereas python allows iterating over a collection with the following syntax
+    for item in collection:
+        dostuff;
+    
+JS requires the following:
+    for(let item in collection){
+        dostuff;
+    }
+
+    
+*/
+
+
