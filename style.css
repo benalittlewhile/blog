@@ -1,3 +1,7 @@
+a {
+  color: #eeffff;
+}
+
 body {
     background-color: #263238;
     font-family: 'Fira Code', monospace;
@@ -22,9 +26,6 @@ body {
     font-size: 16px;
 }
 
-a {
-  color: #eeffff;
-}
 
 .navbar {
   background-color: #1c2529;
