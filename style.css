@@ -21,6 +21,11 @@ body {
     padding-top: 5px;
     font-size: 16px;
 }
+
+a {
+  color: #eeffff;
+}
+
 .navbar {
   background-color: #1c2529;
   overflow: hidden;
