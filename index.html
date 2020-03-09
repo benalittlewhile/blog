@@ -1,152 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>A Blog of Sorts</title>
-    <link href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
     <!-- add mocha css, to show results -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css"
+    />
     <!-- add mocha framework code -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
     <script>
-        mocha.setup('bdd'); // minimal setup
+      mocha.setup("bdd"); // minimal setup
     </script>
     <!-- add chai -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
     <script>
-        // chai has a lot of stuff, let's make assert global
-        let assert = chai.assert;
+      // chai has a lot of stuff, let's make assert global
+      let assert = chai.assert;
     </script>
     <script async src="script.js"></script>
     <script async src="test.js"></script>
-<body>
     <title>Blag</title>
-
-    
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- This page will run tests from tests/test.js when mocha.run() is -->    
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- This page will run tests from tests/test.js when mocha.run() is -->
     <!-- ... well ... run-->
     <div id="mocha"></div>
 
     <title>Blag</title>
     <div class="navbar">
-        <a class="active" href="index.html">blog</a>
-        <a href="goals.html">tolearn</a>
+      <a class="active" href="index.html">blog</a>
+      <a href="goals.html">tolearn</a>
     </div>
     <div class="center">
-        <div class="post">
-            <h1>January 28</h1>
-            <p>
-                I want to focus on javascript and python. I think these languages will suit my tastes and provide good prospects for finding a job at some point soon.
-                javascript is fun to me because there's so much being done with it, the community is always changing and creating new things to look at and work with (mostly frameworks, for better or worse).
-                Additionally, I happen to like the syntax and much of how the language works, It just feels nice to me. As far as jobs, I've always said that web dev (in my idealized little world) lends itself to companies with a community of creatives or innovative people working towards different goals. I realize this is a little naive, but hopefully it proves truer than I might expect. Then you toss in node for other stuff and.... yeah, lots of different paths from there.
-                <br><br> 
-                Alternately, and a bit new, I could work on learning ios dev in
-                swift. I have no idea what swift is like (guess: similar to c++), but I think mobile dev could be very suiting. Hmm.
-            </p>
-        </div >
-        <div class="post">
-            <h1>January 30</h1>
-            <p>
-                Write... so... Lots to do for homework at the moment. I think (know) the biggest thing is going to be my ai homework, dealing with various pathing algorithms and strategies. As I understand it so far, the assignment is about universal cost search, greedy best first search, and A*. I think I need a snack before I get started on them... and maybe a nap.
-                <br><br>
-                Ended up being a very good day, some great alone time and studying then a fantastic dnd session with some friends. I've got a lot of plans for that world, looking forward to the story we're all going to tell together.
-                On the tech side of things, planning to do a little more of the tutorial at <a href="https://javascript.info">javascript.info</a> and call it a night. Overall a good day, but I'd like to try and get a bit more done tomorrow. Especially homework.
-            </p>
-        </div >
-        <div class="post">
-            <h1>January 31</h1>
-            <p>
-                Javascript has an advanced mode! For special people who know 
-                about it! Not really of course, but it's a fun sentiment. 
-                Evidently as of es5 javascript broke some stuff with backwards
-                compatibility. I'm sure this made many people extremely happy
-                and was settled as peacefully as every other holy war in the 
-                history of Earth. Regardless, in order to unbreak the old stuff,
-                the new stuff was disabled by default, which means we have to 
-                enable it when we want to use it. we do this using
-            </p>
-            <code class="prettyprint">
-                "use strict";
-            </code>
-            <p>
-                Noooooooow..... to find out what you can do with it.
-            </p>
-        </div>
-        <div class="post">
-            <h1>February 2</h1>
-            <p>
-                I've got a few hours before the super bowl starts and all hell br- I mean before a bunch of people come over.
-                During that time I think I'll work on more of that <a href="https://javascript.info">javascript tutorial </a> I've been working through.
-                
-            </p>
-        </div>
-        <div class="post">
-            <h1>February 19</h1>
-            <p>
-                Not a lot of blog in the past few weeks due to an influx of homework and social obligations, but I finally got a chance to work today! Did a few things actually.
-                <ul>
+      <div class="post">
+        <h1>January 28</h1>
+        <p>
+          I want to focus on javascript and python. I think these languages will
+          suit my tastes and provide good prospects for finding a job at some
+          point soon. javascript is fun to me because there's so much being done
+          with it, the community is always changing and creating new things to
+          look at and work with (mostly frameworks, for better or worse).
+          Additionally, I happen to like the syntax and much of how the language
+          works, It just feels nice to me. As far as jobs, I've always said that
+          web dev (in my idealized little world) lends itself to companies with
+          a community of creatives or innovative people working towards
+          different goals. I realize this is a little naive, but hopefully it
+          proves truer than I might expect. Then you toss in node for other
+          stuff and.... yeah, lots of different paths from there.
+          <br /><br />
+          Alternately, and a bit new, I could work on learning ios dev in swift.
+          I have no idea what swift is like (guess: similar to c++), but I think
+          mobile dev could be very suiting. Hmm.
+        </p>
+      </div>
+      <div class="post">
+        <h1>January 30</h1>
+        <p>
+          Write... so... Lots to do for homework at the moment. I think (know)
+          the biggest thing is going to be my ai homework, dealing with various
+          pathing algorithms and strategies. As I understand it so far, the
+          assignment is about universal cost search, greedy best first search,
+          and A*. I think I need a snack before I get started on them... and
+          maybe a nap.
+          <br /><br />
+          Ended up being a very good day, some great alone time and studying
+          then a fantastic dnd session with some friends. I've got a lot of
+          plans for that world, looking forward to the story we're all going to
+          tell together. On the tech side of things, planning to do a little
+          more of the tutorial at
+          <a href="https://javascript.info">javascript.info</a> and call it a
+          night. Overall a good day, but I'd like to try and get a bit more done
+          tomorrow. Especially homework.
+        </p>
+      </div>
+      <div class="post">
+        <h1>January 31</h1>
+        <p>
+          Javascript has an advanced mode! For special people who know about it!
+          Not really of course, but it's a fun sentiment. Evidently as of es5
+          javascript broke some stuff with backwards compatibility. I'm sure
+          this made many people extremely happy and was settled as peacefully as
+          every other holy war in the history of Earth. Regardless, in order to
+          unbreak the old stuff, the new stuff was disabled by default, which
+          means we have to enable it when we want to use it. we do this using
+        </p>
+        <code class="prettyprint">
+          "use strict";
+        </code>
+        <p>
+          Noooooooow..... to find out what you can do with it.
+        </p>
+      </div>
+      <div class="post">
+        <h1>February 2</h1>
+        <p>
+          I've got a few hours before the super bowl starts and all hell br- I
+          mean before a bunch of people come over. During that time I think I'll
+          work on more of that
+          <a href="https://javascript.info">javascript tutorial </a> I've been
+          working through.
+        </p>
+      </div>
+      <div class="post">
+        <h1>February 19</h1>
+        <p>
+          Not a lot of blog in the past few weeks due to an influx of homework
+          and social obligations, but I finally got a chance to work today! Did
+          a few things actually.
+        </p>
 
-                    <li>
-                        Updated my <a href="https://github.com/benalittlewhile/dotfiles">dotfiles</a> repo on github to match my new setup, loving how easy vs code makes it to back everything up to the repo and move to a new system if needed. Also, since I don't think I've said it here: <span title="Happy little tree in my terminal :)"><a href="https://gitlab.com/jallbrit/bonsai.sh">bonsai.sh</a> is far and away my favorite bit of software I've used recently. I love the way it integrates with neofetch, clean and pleasing every time I open a terminal. 10/10 would recommend.</span>
-                    </li>
-                    <br>
-                    <li>
-                        Worked on my networking homework. We're using <a 
-                        href="http://mininet.org/">mininet</a> to simulate various 
-                        network topologies, and I struggled to get it running 
-                        properly on my home server. Both the source and packaged 
-                        installs gave me weird errors, which I traced back to 
-                        openvswitch but couldn't remedy. I ended up just using 
-                        mininet's prebuilt vm image with qemu to run the tests our professor requested. 
-                    </li>
-                    <br>
-                    <li>
-                        Started my senior design project! My team is working on
-                        a scheduling app for a music institute in Dallas using
-                        <a href="https://developers.google.com/optimization">Google OR Tools</a> for optimization. I'll be working with another
-                        teammate on the front end of the project, and I'm really
-                        looking forward to digging in and making something useful.
-                        <br><br> We decided to use Vue as a front end framework for 
-                        the app since a) doing input and output by hand for the 
-                        kinds of data we're going to be working with would be 
-                        extremely taxing, and b) working with components will 
-                        allow for a clean, consistent experience that can scale 
-                        to whatever the project needs. I personally wanted to 
-                        find c) a front end framework that I could really get 
-                        into. While I might have preferred React for its wider 
-                        industry adoption and, by extension, job prospects, I 
-                        think Vue is the better choice for the scale of project 
-                        we're targeting.
-                        <span title="I fully acknowledge my hubris on this point, but even if it bites me I'll learn something useful">
-                            Of course, if we find we need the power of React or
-                            another more comprehensive platform, switching over 
-                            should be a fairly simple, and educational,
-                            experience.
-                        </span>
-                    </li>
-                </ul>
-                Later today I'll finish my machine learning assignment in R 
-                and hopefully get to make a little more progress on that js 
-                tutorial.
-        </div>
-        <div class="post">
-            <h1>February 26</h1>
-            <p>
-                Adding a page to this site to track the things I want to work on or learn. I think having a nice big poster for all of it will help provide direction for the times I sit down and can't decide what to look at. Of course, a second page means I'm going to need a way to get to it, so a nav bar is in order. Lots of new things, gonna be fun.
-            </p>
-            <p>
-                20 minutes later - That uh... took a lot less time than it might have. Thanks css! (Can't remember thinking that before...) 
-                <br>
-                I like the implementation so far, but having to change the headers in every page each time I add a new one, and copy the header to the new page past that, is going to get tedious quickly. I suspect that's running into one of the reasons frameworks are so prevalent. Over spring break I plan to try and make something in react to add to my portfolio, refactoring this site to use it might be a good way to get my feet wet before diving into something bigger.
-            </p>
-        </div>
+        <ul>
+          <li>
+            Updated my
+            <a href="https://github.com/benalittlewhile/dotfiles">dotfiles</a>
+            repo on github to match my new setup, loving how easy vs code makes
+            it to back everything up to the repo and move to a new system if
+            needed. Also, since I don't think I've said it here:
+            <span title="Happy little tree in my terminal :)"
+              ><a href="https://gitlab.com/jallbrit/bonsai.sh">bonsai.sh</a> is
+              far and away my favorite bit of software I've used recently. I
+              love the way it integrates with neofetch, clean and pleasing every
+              time I open a terminal. 10/10 would recommend.</span
+            >
+          </li>
+          <br />
+          <li>
+            Worked on my networking homework. We're using
+            <a href="http://mininet.org/">mininet</a> to simulate various
+            network topologies, and I struggled to get it running properly on my
+            home server. Both the source and packaged installs gave me weird
+            errors, which I traced back to openvswitch but couldn't remedy. I
+            ended up just using mininet's prebuilt vm image with qemu to run the
+            tests our professor requested.
+          </li>
+          <br />
+          <li>
+            Started my senior design project! My team is working on a scheduling
+            app for a music institute in Dallas using
+            <a href="https://developers.google.com/optimization"
+              >Google OR Tools</a
+            >
+            for optimization. I'll be working with another teammate on the front
+            end of the project, and I'm really looking forward to digging in and
+            making something useful. <br /><br />
+            We decided to use Vue as a front end framework for the app since a)
+            doing input and output by hand for the kinds of data we're going to
+            be working with would be extremely taxing, and b) working with
+            components will allow for a clean, consistent experience that can
+            scale to whatever the project needs. I personally wanted to find c)
+            a front end framework that I could really get into. While I might
+            have preferred React for its wider industry adoption and, by
+            extension, job prospects, I think Vue is the better choice for the
+            scale of project we're targeting.
+            <span
+              title="I fully acknowledge my hubris on this point, but even if it bites me I'll learn something useful"
+            >
+              Of course, if we find we need the power of React or another more
+              comprehensive platform, switching over should be a fairly simple,
+              and educational, experience.
+            </span>
+          </li>
+        </ul>
+        Later today I'll finish my machine learning assignment in R and
+        hopefully get to make a little more progress on that js tutorial.
+      </div>
+      <div class="post">
+        <h1>February 26</h1>
+        <p>
+          Adding a page to this site to track the things I want to work on or
+          learn. I think having a nice big poster for all of it will help
+          provide direction for the times I sit down and can't decide what to
+          look at. Of course, a second page means I'm going to need a way to get
+          to it, so a nav bar is in order. Lots of new things, gonna be fun.
+        </p>
+        <p>
+          20 minutes later - That uh... took a lot less time than it might have.
+          Thanks css! (Can't remember thinking that before...)
+          <br />
+          I like the implementation so far, but having to change the headers in
+          every page each time I add a new one, and copy the header to the new
+          page past that, is going to get tedious quickly. I suspect that's
+          running into one of the reasons frameworks are so prevalent. Over
+          spring break I plan to try and make something in react to add to my
+          portfolio, refactoring this site to use it might be a good way to get
+          my feet wet before diving into something bigger.
+        </p>
+      </div>
     </div>
-</body>
+  </body>
 </html>
