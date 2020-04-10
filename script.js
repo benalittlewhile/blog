@@ -3,17 +3,18 @@
 //that's it. That's the commit.
 
 // so. Strings are strings are strings, but some strings are better than others.
-let string1 = 'string';
-let string2 = 'string';
+let string1 = "string";
+let string2 = "string";
 
 // simple enough right?
 // but! We can be fancy about it. For example
 
-let num1 = 32, num2 = 10;
+let num1 = 32,
+  num2 = 10;
 
-string2 = `the meaning of the universe is ${num1 + num2}`
+string2 = `the meaning of the universe is ${num1 + num2}`;
 
-console.log(string2)
+console.log(string2);
 
 // surrounding a string in backticks allows us to use a $ to
 // execute statements or access variables (and I'm sure many
@@ -25,11 +26,9 @@ console.log(string2)
 //           within them is an expression
 // ALSO!!! THEY CAN RUN OVER MULTIPLE LINES
 
-string2 = `thing ${console.log('another thing')}`;
-let string3 = 
-`THIS IS A THING THAT 
-IS STILL A THING IF WE PUT IT HERE`
-
+string2 = `thing ${console.log("another thing")}`;
+let string3 = `THIS IS A THING THAT 
+IS STILL A THING IF WE PUT IT HERE`;
 
 // answer 1: yes
 // OOOOOOOH
@@ -38,7 +37,7 @@ IS STILL A THING IF WE PUT IT HERE`
 
 // in js, null is "literally nothing" while undefined is only "not assigned"
 
-// [one] convention suggests to use null for values which are initialized but 
+// [one] convention suggests to use null for values which are initialized but
 // have nothing in them yet.
 
 // Question 3: does the concat operator do the silly string thing when
@@ -46,11 +45,11 @@ IS STILL A THING IF WE PUT IT HERE`
 
 let string4 = `this is a template string = ` + 3.14;
 
-console.log(string4)
+console.log(string4);
 
 // Answer 3: yes!
 
-// Unary plus (+"2" = 2, etc.) and negation (not sure yet) go first where 
+// Unary plus (+"2" = 2, etc.) and negation (not sure yet) go first where
 // operators are concerned
 
 // JS newly has an exponentiation operator **
@@ -60,7 +59,7 @@ let exp1 = 2 ** 3;
 
 // exp1 = 8 (2^3)
 
-// I can't see the advantage of doing this, but the comma operator evaluates 
+// I can't see the advantage of doing this, but the comma operator evaluates
 // everything from left to right then returns the last value
 
 /*
@@ -75,7 +74,9 @@ These windows are modal (hog all interaction until dismissed), and we can't
 change their appearance.
 */
 
-if (true) {/*dothing*/}
+if (true) {
+  /*dothing*/
+}
 
 /* Ternary operator - OKAY IT'S TIME FOR THIS H*CKER
 SO: You know how it would be convenient sometimes to decide inline
@@ -104,10 +105,10 @@ but this is kind of bad from a readability standpoint.
 let funcyvar = 15;
 
 function funcy(x, y) {
-    let funcyvar = 17;
-    funcyvar = 16;
-    console.log(funcyvar);
-    return x + y;
+  let funcyvar = 17;
+  funcyvar = 16;
+  console.log(funcyvar);
+  return x + y;
 }
 
 funcy();
@@ -179,8 +180,8 @@ Question: Can arrow function bodies have braces and multiple lines?
 */
 
 let funcy4 = () => {
-    console.log('line 1');
-    console.log('line 2');
+  console.log("line 1");
+  console.log("line 2");
 };
 
 /*
@@ -191,7 +192,7 @@ general.
 
 funcy4();
 
-// we can set a break point in the code itself using 
+// we can set a break point in the code itself using
 //      debugger;
 
 // can't nest comments so this is gonna get messy, but here's an example of
@@ -205,7 +206,7 @@ funcy4();
  * @return {number} x raised to the n-th power.
  */
 
- /*
+/*
  function pow(x, n) {
   ...
 }
@@ -227,8 +228,8 @@ computed outside of the object itself. For example:
 let boxguy = {};
 let boxkey = "the key to a box";
 boxguy = {
-    name: 'boxy',
-    [boxkey]: "The box key value",
+  name: "boxy",
+  [boxkey]: "The box key value",
 };
 
 /*
@@ -241,10 +242,10 @@ what this can do when des- wait does it actually run a function if we feed it
 one?
 */
 
-let return4 = () => 2+2;
+let return4 = () => 2 + 2;
 
 let box2 = {
-    [return4()]: "A thing that returns",
+  [return4()]: "A thing that returns",
 };
 
 /*
@@ -255,7 +256,7 @@ AH But it will if we run them ourselves... which isn't the same thing but
 accomplishes the same result. So be it.
 Admittedly, if the set of things inside the brackets evaluates to a string
 then that string becomes the key for the property, which is neat
-*/ 
+*/
 
 /*
 Property value shorthand
@@ -265,11 +266,11 @@ automatically assumed to be the variable name.
 eg:
 */
 
-let boxname = 'A box from a distinct part of town'
+let boxname = "A box from a distinct part of town";
 let namedbox = {
-    boxname,
-    value: 'more than another box, probably',
-}
+  boxname,
+  value: "more than another box, probably",
+};
 
 /*
 namedbox automatically has property boxname with the value supplied previously.
@@ -315,4 +316,43 @@ JS requires the following:
     
 */
 
+// I completely forgot what chapter I was on, so I'm picking up from
+// javascript.info/object
 
+let ace = {
+  age: 21,
+  music: true,
+  good: "guy",
+  yee: "haw",
+  // we can start a property with multiple words, but if we do this we can only
+  // access the property using square bracket notation, not with dot notation
+  "music genre": "wubwubs",
+};
+
+// except eric isn't that western, so let's delete that
+
+delete ace.yee;
+
+console.log(ace.yee);
+
+// it's worth noting that Eric makes a specific type of music
+
+console.log(ace["music genre"]);
+
+// the "in" operator tests if a property is in an object by accessing it and
+// checking if the result exists by comparing to === undefined. This works,
+// but it's worth noting that if we manually assign undefined to a property
+// then that value will technically exist and return true for in
+
+// HEY LOOK AT THIS ONE
+// YES
+// THIS LOOK AT IT LOOK AT THIS ONE IT'S IMPORTANT
+
+// !!!!!!!!!!!!!
+// OBJECTS ARE COPIED BY REFERENCE NOT VALUE
+// !!!!!!!!!!!!!
+
+// THERE IS ONLY EVER ONE INSTANCE OF AN OBJECT UNLESS YOU MANUALLY COPY IT
+// not this look at the thing above it
+// too far, go back
+// no seriously you silly butt look uo
