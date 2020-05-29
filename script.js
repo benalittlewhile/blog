@@ -355,4 +355,42 @@ console.log(ace["music genre"]);
 // THERE IS ONLY EVER ONE INSTANCE OF AN OBJECT UNLESS YOU MANUALLY COPY IT
 // not this look at the thing above it
 // too far, go back
-// no seriously you silly butt look uo
+// no seriously you silly butt look up
+
+// So now we know about creating objects with various properties, and we know
+// that because objects point to memory locations they are copied by reference
+// when used in assignment statements.
+// So, we need a way to copy an object. This tutorial suggests two good ways
+// of accomplishing this:
+
+// Iterate through the various keys
+
+let ace2 = {};
+
+for (key in ace) {
+  ace2[key] = ace[key];
+}
+
+// Use Object.assign to copy
+// where Object.assign(src, obj1, obj2...)
+
+let ace3 = Object.assign({}, ace);
+
+// These methods work fine for instances where the object in question is
+// composed of primitives, but fail when faced with an object that has another
+// object as a property
+// The solution? Deep cloning, an algorithm which already exists
+// Several sources recommend using lodash's methods for this
+
+// Next chapter: garbage collection
+
+// Core concept of js garbage collection: reachability. Things that are
+// reachable from current variables either directly or by chain of references
+// are kept, everything else is garbage collected and deleted
+
+// trying some new stuff from an article I read on functional programming
+// today we're going to play with map. I want to see how it behaves first when
+// used with an array, and second when we use it with an object
+
+// array:
+["Eric", "Charlie", "Nate", "Ben", "Kate"].map((str) => str.substring(0, 2));
