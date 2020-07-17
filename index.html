@@ -24,6 +24,77 @@
     </div>
     <div class="center" id="posts">
       <div class="post">
+        <h1>July 17: Moving to React, pt. 1</h1>
+        <p>
+          I want to add a dynamic, reusable navbar to my site that will
+          automatically flag the current page as active for styling purposes.
+          Evidently creating reusable html in general requires some framework
+          for doing so. I already plan to use react to rebuild the site
+          eventually, might as well take this opportunity to do so now.
+          <br><br>
+          Steps: <br>
+          1 - create new repo = done <br>
+          because react is chonky and weird and I (probably) can't just share
+          the built version directly using github pages, imma need a new repo
+          <br><br>
+          2 - get setup for react dev = done <br>
+          I already have a boilerplate I like in a different repo, so I'll copy
+          that in and install everything
+          <br><br>
+          3 - create a basic react project = done
+          To me this means a functional index.html that renders some text using
+          a react app. Big kid stuff, to be sure.
+          <br>
+          Actually, here I can just copy/paste the one from my boilerplate. I'll
+          be putting it in /lib for the time being, but I suspect it isn't (by
+          convention) supposed to go there.
+          <br><br>
+          4 - Let's make a navbar = done <br>
+          Yay the basic app works! Next step is to try and reacreate the nav
+          bar I have on the blog currently.
+          <br><br>
+          And this is where it gets interesting. The navbar as it exists now
+          is just a div, with a bunch of links inside it. The styling makes
+          the words look like blocks. This brings me back to my initial
+          intention: <br>
+          I want to make a navbar that automatically marks the appropriate
+          link for the current page as active for styling purposes. I can do
+          this in a variety of ways <br>
+          - have each block check to see if its own title matches the current
+          page title, and if so add/adopt(?) the "active" class <br>
+          - have the navbar itself tell a block that it is "active" when
+          rendered if the title of the block is the same as the current page
+          <br><br>
+
+          I ended up having each individual link check to see if it should be
+          active or not. This worked swimmingly.
+
+          <br><br>
+          5 - Styling = done <br>
+          I laid out the skeleton with components, meaning it's time to make it
+          pretty. Because I'm moving over an existing site, I already have all
+          the styling done, I just need to import it. I ended up messing around
+          for a while trying to get css in js and other silliness to work, but
+          as usual the simplest strategy was the easiest: literally just add
+          the stylesheet to the html file (and add classNames to all the
+          components but shush). Site looks lovely again :D
+
+          <br><br>
+          6/end - next steps <br>
+          I'm finished for today, but very happy with the progress. My obvious
+          next step is to get a second page set up for tolearn, my current plan
+          being to just... make another html file... and add a react app to it..
+          wild. (I get the feeling this might not be the *best* way to do this,
+          so I'll plan for a little research as well)
+          <br><br>
+          After that I'll need to either copy/paste all my posts over (bad), or
+          create a way to programatically add blog posts to the page. I have a
+          couple thoughts, and I'm looking forward to seeing how this is done.
+          <br>
+          edit: a quick search looks like react-router will be perfect!
+        </p>
+      </div>
+      <div class="post">
         <h1>July 14: "Now draw the rest of the 6 months"</h1>
         <p>
           Hoooooly h*ck... it's been a little while now huh. That's on me, I
