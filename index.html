@@ -24,6 +24,87 @@
     </div>
     <div class="center" id="posts">
       <div class="post">
+        <h1>July 17: More notes from my move to React</h1>
+        <p>
+          Yesterday I ended by marking my next steps as
+        <ol>
+          <li>
+            Establishing a way to render multiple pages using React
+            <br> -A bit of research implied that react-router would be a good
+            way to get used to doing this
+          </li>
+          <li>
+            Finding a way to programatically render my blog posts so I don't
+            have to hand code each and every one of them in html
+          </li>
+        </ol>
+
+        I'm thinking today I'll start with task 1, which would be great... but
+        the react-router website is down :(
+        <br>
+        ...also npm is down. Apparently. Leaving me unable to install
+        react-router in the first place. Task 2 it is!
+        <br><br>
+        <hr><br>
+        importing directly from text files seems... needlessly complicated for
+        what
+        I'm trying to do. At this point I'm leaning towards storing posts as
+        objects
+        in a separate jsx file and importing them that way. If nothing else it
+        would
+        decouple the way I write and the way I render them.
+        <br><br>
+        <hr><br>
+        Drumming my fingers waiting for npm to come back up, so in the
+        meantime I'll
+        go ahead and split my navbar into its own file.
+        <br><br>
+        <hr><br>
+        Done and done, with comments and everything. So very much cleaner, I
+        can see
+        why standardized modules were such a huge thing when they came out. I
+        also
+        got a second page rendering for toLearn, but I still think that's not
+        the
+        most proper way to do this. npm is alive again, so I'll go ahead and
+        try out
+        react-router to see if it's much better.
+
+        <br><br>
+        <hr><br>
+        Right off the bat I think I might need to restructure the whole page
+        to use
+        this effectively. I'll try setting up a router in the navbar itself,
+        but I
+        don't know if that will work as easily as I'm hoping
+
+        <br><br>
+        I'm nearly certain that I'm correct: I need to have a router setup as
+        the
+        nav bar on the main page, and import the bodies of the other pages so
+        it can
+        use them.
+        <br><br>
+        <hr><br>
+        ARGH this is silly
+        I'm not certain (yet), but I think I literally can't use both react
+        (installed via npm) and react-router-dom without setting up webpack.
+        Which
+        is gross, because I already had a happy little toolchain running, and
+        now I
+        have to break it again. /headdesk.
+        <br>
+        ...boutta just restart with create-react-app...
+        yeah. guess it's that time.
+        <br><br>
+        <hr><br>
+        Gosh dangit that was legitimately so much easier. Simple enough to
+        recreate
+        what I already had working after restarting with create-react-app.
+        Looking forward to continuing to move forward tomorrow.
+        </p>
+      </div>
+      <div class="post">
         <h1>July 17: Moving to React, pt. 1</h1>
         <p>
           I want to add a dynamic, reusable navbar to my site that will
